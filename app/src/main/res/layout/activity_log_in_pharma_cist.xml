@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".LogInPatientActivity"
+    tools:context=".LogInPharmaCistActivity"
     >
 
 
@@ -30,7 +30,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/patientLoginId"
+            android:id="@+id/pharmacistLoginId"
             android:layout_width="match_parent"
             android:textColor="@color/white"
             android:elevation="3dp"
@@ -49,7 +49,7 @@
 
 
         <EditText
-            android:id="@+id/patientLoginPassword"
+            android:id="@+id/pharmacistLoginPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="3dp"
@@ -69,7 +69,7 @@
 
 
         <Button
-            android:id="@+id/logInPatientBtn"
+            android:id="@+id/logInPharmacistBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
