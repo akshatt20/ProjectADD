@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ProjectAdd</string>
+    <string name="doctor">Doctor</string>
+    <string name="patient">Patient</string>
+    <string name="pharmacist">Pharmacist</string>
+    <string name="log_in">Log in</string>
+    <string name="login_id">Login ID</string>
+    <string name="password">Password</string>
+</resources>

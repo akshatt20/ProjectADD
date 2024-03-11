@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".LogInPatientActivity"
+    >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="6dp"
+        android:layout_marginHorizontal="4dp"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/log_in"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/black"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/patientLoginId"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:elevation="3dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="3dp"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="25dp"
+            android:maxLength="10"
+            android:paddingVertical="15dp"
+            android:inputType="text"
+            android:hint="@string/login_id"
+            android:textColorHint="@color/black"
+            android:background="@color/white"
+            android:ems="10"
+            />
+
+
+        <EditText
+            android:id="@+id/patientLoginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/white"
+            android:elevation="3dp"
+            android:ems="10"
+            android:hint="@string/password"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+        <Button
+            android:id="@+id/logInPatientBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/log_in"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:padding="10dp" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
