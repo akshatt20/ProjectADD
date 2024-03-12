@@ -8,9 +8,6 @@
     android:padding="20dp"
     tools:context=".LogInPatientActivity"
     >
-
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,9 +43,7 @@
             android:background="@color/white"
             android:ems="10"
             />
-
-
-        <EditText
+   <EditText
             android:id="@+id/patientLoginPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -77,6 +72,31 @@
             android:textSize="22sp"
             android:textColor="@color/white"
             android:padding="10dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/already_have_an_account"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/signUpPatientOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Sign Up"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+
 
     </LinearLayout>
 

@@ -21,65 +21,53 @@
         android:padding="25dp">
 
 
-        <EditText
+        <Button
             android:id="@+id/doctorWelcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="3dp"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="20dp"
-            android:background="@color/white"
             android:elevation="3dp"
             android:ems="10"
-            android:inputType="text"
             android:padding="15dp"
             android:text="@string/doctor"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            />
 
-
-        <EditText
+        <Button
             android:id="@+id/patientWelcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="3dp"
             android:layout_marginBottom="24dp"
-            android:background="@color/white"
             android:elevation="3dp"
             android:ems="10"
-            android:inputType="text"
             android:padding="15dp"
             android:text="@string/patient"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/regName" />
+            />
 
 
-        <EditText
+        <Button
             android:id="@+id/pharmacistWelcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="3dp"
             android:layout_marginBottom="2dp"
-            android:background="@color/white"
             android:elevation="3dp"
             android:ems="10"
-            android:inputType="text"
             android:padding="15dp"
             android:text="@string/pharmacist"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/regMobileNo" />
+             />
+
 
     </LinearLayout>
 

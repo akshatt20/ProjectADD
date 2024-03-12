@@ -13,7 +13,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="25dp"
         android:layout_marginHorizontal="3dp"
         android:background="@color/white"
         android:elevation="6dp"
@@ -21,7 +20,19 @@
 
 
 
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_aboard"
+            android:textStyle="bold"
+            android:layout_gravity="left" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/please_enter_details"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="left" />
         <EditText
             android:id="@+id/doctorName"
             android:layout_width="match_parent"
@@ -30,21 +41,19 @@
             android:textColorHint="@color/black"
             android:ems="10"
             android:background="@color/white"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="10dp"
             android:elevation="3dp"
             android:padding="15dp"
             android:textColor="@color/black"
             android:inputType="textPersonName"
             android:hint="@string/enter_your_name"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            />
 
         <EditText
             android:id="@+id/doctorMobileNoemail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginHorizontal="3dp"
             android:textColorHint="@color/black"
             android:ems="10"
@@ -54,16 +63,14 @@
             android:textColor="@color/black"
             android:inputType="textEmailAddress"
             android:hint="@string/mobile_no_email"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+           />
 
         <EditText
             android:id="@+id/doctorPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="3dp"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="10dp"
             android:background="@color/white"
             android:elevation="3dp"
             android:ems="10"
@@ -72,15 +79,13 @@
             android:padding="15dp"
             android:textColor="@color/white"
             android:textColorHint="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/doctorMobileNoemail" />
+ />
         <EditText
             android:id="@+id/doctorOrganization"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="3dp"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="10dp"
             android:background="@color/white"
             android:elevation="3dp"
             android:ems="10"
@@ -89,9 +94,7 @@
             android:padding="15dp"
             android:textColor="@color/white"
             android:textColorHint="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/doctorPassword" />
+            />
 
         <EditText
             android:id="@+id/doctorAge"
@@ -101,22 +104,20 @@
             android:textColorHint="@color/black"
             android:layout_marginHorizontal="3dp"
             android:ems="10"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="10dp"
             android:background="@color/white"
             android:padding="15dp"
             android:hint="@string/age"
             android:inputType="textPersonName"
             android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/doctorOrganization"/>
+            />
 
             <EditText
                 android:id="@+id/doctorGender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
-                android:layout_marginBottom="12dp"
+                android:layout_marginBottom="10dp"
                 android:background="@color/white"
                 android:elevation="3dp"
                 android:ems="10"
@@ -125,15 +126,13 @@
                 android:padding="15dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/doctorAge" />
+                 />
             <EditText
                 android:id="@+id/doctorLicenseNo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
-                android:layout_marginBottom="12dp"
+                android:layout_marginBottom="10dp"
                 android:background="@color/white"
                 android:elevation="3dp"
                 android:ems="10"
@@ -142,15 +141,13 @@
                 android:padding="15dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/doctorGender" />
+                 />
         <EditText
             android:id="@+id/doctorSpeciality"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="3dp"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="10dp"
             android:background="@color/white"
             android:elevation="3dp"
             android:ems="10"
@@ -159,9 +156,7 @@
             android:padding="15dp"
             android:textColor="@color/white"
             android:textColorHint="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/doctorGender" />
+          />
 
 
     </LinearLayout>
@@ -169,22 +164,43 @@
     <Button android:id="@+id/doctorSignUpButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:text="@string/sign_up"
         android:textAllCaps="false"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
         android:textSize="20sp"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regPincode"/>
+       />
 
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp"
-        android:gravity="center"/>
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Already have an account?"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:gravity="right"
+            android:textSize="16dp"
+            android:layout_gravity="right"
+            android:paddingRight="12dp"
+            />
+        <TextView
+            android:id="@+id/logInDirectToSignUpDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log in "
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="right"
+            android:layout_gravity="left"
+            />
+
+    </LinearLayout>
+
 
 </LinearLayout>

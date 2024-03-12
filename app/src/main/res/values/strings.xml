@@ -14,4 +14,10 @@
     <string name="speciality">Speciality</string>
     <string name="license_no">License No</string>
     <string name="sign_up">Sign Up</string>
+    <string name="already_have_an_account">Already have an account</string>
+    <string name="location">Location</string>
+    <string name="degree">Degree</string>
+    <string name="already_have_an_account_login_in">Already have an account Login In</string>
+    <string name="welcome_aboard">Welcome ABOARD</string>
+    <string name="please_enter_details">Please enter details</string>
 </resources>
