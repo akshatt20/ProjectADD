@@ -61,7 +61,7 @@
             android:elevation="3dp"
             android:padding="15dp"
             android:textColor="@color/black"
-            android:inputType="textEmailAddress"
+            android:inputType="textPersonName"
             android:hint="@string/mobile_no_email"
            />
 
@@ -75,9 +75,9 @@
             android:elevation="3dp"
             android:ems="10"
             android:hint="Password"
-            android:inputType="textPassword"
+            android:inputType="textPersonName"
             android:padding="15dp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textColorHint="@color/black"
  />
         <EditText
@@ -92,7 +92,7 @@
             android:hint="@string/hospital_organization"
             android:inputType="textPersonName"
             android:padding="15dp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textColorHint="@color/black"
             />
 
@@ -124,7 +124,7 @@
                 android:hint="@string/gender"
                 android:inputType="textPersonName"
                 android:padding="15dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textColorHint="@color/black"
                  />
             <EditText
@@ -137,9 +137,9 @@
                 android:elevation="3dp"
                 android:ems="10"
                 android:hint="@string/license_no"
-                android:inputType="textPassword"
+                android:inputType="textPersonName"
                 android:padding="15dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textColorHint="@color/black"
                  />
         <EditText
@@ -154,7 +154,7 @@
             android:hint="@string/speciality"
             android:inputType="textPersonName"
             android:padding="15dp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textColorHint="@color/black"
           />
 

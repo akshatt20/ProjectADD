@@ -131,14 +131,13 @@
 
     </LinearLayout>
 
-    <Button android:id="@+id/doctorSignUpButton"
+    <Button android:id="@+id/pharmacistSignUpButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="@string/sign_up"
         android:textAllCaps="false"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
         android:textSize="20sp"
         android:layout_marginBottom="12dp"
         />

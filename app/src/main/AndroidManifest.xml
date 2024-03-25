@@ -13,6 +13,21 @@
         android:theme="@style/Theme.ProjectAdd"
         tools:targetApi="31">
         <activity
+            android:name=".MedicineListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorScanPatientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PatientDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".LogInPharmaCistActivity"
             android:exported="false" />
         <activity
