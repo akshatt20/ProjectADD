@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.PatientHomeFragment">
+
+
+    <LinearLayout
+        android:id="@+id/patientProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="2dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="25dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
+            android:text="WELCOME ABOARD"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:layout_marginBottom="10dp"
+            android:scrollbarSize="15dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Here is every detail of the patient you have entered"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_marginBottom="50dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/activated"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/teal_200"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Activated"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/deactivated1"
+           android:layout_width="match_parent"
+           android:layout_height="70dp"
+           android:orientation="vertical"
+           android:layout_marginBottom="30dp"
+           android:background="@color/colorRed">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:gravity="center"
+               android:text="Deactivated"
+               android:textSize="18sp"/>
+       </LinearLayout>
+        <LinearLayout
+            android:id="@+id/deactivated2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="30dp"
+            android:background="@color/colorRed">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Deactivated"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
