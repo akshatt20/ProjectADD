@@ -4,10 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.google.firebase.firestore.FirebaseFirestore
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import com.google.firebase.firestore.FirebaseFirestore
 
 class SignUpDoctorActivity : AppCompatActivity() {
     private lateinit var logInDirectToSignUpDoctor: TextView
@@ -59,7 +59,6 @@ class SignUpDoctorActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-
             // Create a Doctor map
             val doctor = hashMapOf(
                 "name" to name,
@@ -75,14 +74,15 @@ class SignUpDoctorActivity : AppCompatActivity() {
             // Add a new document with a generated ID
             db.collection("Doctors")
                 .add(doctor)
-                .addOnSuccessListener {
+                .addOnSuccessListener { documentReference ->
                     Toast.makeText(this, "Saved", Toast.LENGTH_LONG).show()
-
+                    // Navigate to DoctorHomeActivity after successful signup
+                    val intent = Intent(this, DoctorHomeActivity::class.java)
+                    startActivity(intent)
                 }
                 .addOnFailureListener { e ->
                     Toast.makeText(this, "Error", Toast.LENGTH_LONG).show()
                 }
-
         }
     }
 }
