@@ -13,13 +13,8 @@ class DoctorHomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_doctor_home)
 
         newPatientButton = findViewById(R.id.newPatient)
-        newPatientButton.setOnClickListener {
-            navigateToDoctorScanPatientActivity()
-        }
+
     }
 
-    private fun navigateToDoctorScanPatientActivity() {
-        val intent = Intent(this, DoctorScanPatientActivity::class.java)
-        startActivity(intent)
-    }
+
 }

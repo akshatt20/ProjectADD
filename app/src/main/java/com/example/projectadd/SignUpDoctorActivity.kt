@@ -1,5 +1,6 @@
 package com.example.projectadd
 
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -77,7 +78,7 @@ class SignUpDoctorActivity : AppCompatActivity() {
                 .addOnSuccessListener { documentReference ->
                     Toast.makeText(this, "Saved", Toast.LENGTH_LONG).show()
                     // Navigate to DoctorHomeActivity after successful signup
-                    val intent = Intent(this, DoctorHomeActivity::class.java)
+                    val intent = Intent(this, EnterActivity::class.java)
                     startActivity(intent)
                 }
                 .addOnFailureListener { e ->

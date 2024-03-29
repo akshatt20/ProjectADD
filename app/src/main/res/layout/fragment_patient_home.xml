@@ -6,15 +6,16 @@
     tools:context=".fragments.PatientHomeFragment">
 
 
-    <LinearLayout
-        android:id="@+id/patientProfile"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginHorizontal="2dp"
-        android:background="@color/white"
-        android:orientation="vertical"
-        android:padding="25dp"
-        >
+
+        <LinearLayout
+            android:id="@+id/patientProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="2dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="25dp"
+            >
 
         <TextView
             android:layout_width="match_parent"

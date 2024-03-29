@@ -22,4 +22,9 @@
     <string name="please_enter_details">Please enter details</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="we_send_a_code_to_verify_your_id">We send a code to verify your ID</string>
+    <string name="verification">Verification</string>
+    <string name="didnt_recieve_a_code">Didnt Recieve a code ?</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="verify">Verify</string>
 </resources>

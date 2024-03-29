@@ -5,4 +5,8 @@
     <color name="blue">#008DDA</color>
     <color name="colorRed">#FFC11515</color>
     <color name="teal_200">#FF03DAC5</color>
+    <color name="ButtonColor">#34C759</color>
+    <color name="grey">#DDDDDD</color>
+
+
 </resources>
