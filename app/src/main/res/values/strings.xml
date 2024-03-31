@@ -27,4 +27,6 @@
     <string name="didnt_recieve_a_code">Didnt Recieve a code ?</string>
     <string name="resend_code">Resend Code</string>
     <string name="verify">Verify</string>
+    <string name="plus_button_description">Increase Quantity</string>
+    <string name="minus_button_description">Decrease Quantity</string>
 </resources>

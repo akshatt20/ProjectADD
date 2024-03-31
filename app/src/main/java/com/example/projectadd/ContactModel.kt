@@ -1,5 +1,7 @@
 package com.example.projectadd
 
-class ContactModel(var name: String,
-                   var price: String,
-    var number:String)
+data class ContactModel(
+    val name: String,
+    var quantity: Int,
+    var id: String,
+)
