@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.example.projectadd.fragments.PatientProfileFragment
+import com.example.projectadd.models.Patient
 import com.google.firebase.firestore.FirebaseFirestore
 
 
@@ -74,12 +75,15 @@ class SignUpPatientActivity : AppCompatActivity() {
                 "residence" to residence,
                 "abhaid" to abhaid // Add Abha ID to patient data
             )
+
+            val patient = Patient(name, abhaid, mobile, age, residence, sex, ArrayList())
+
             val editor = getSharedPreferences("APP_PREFS", MODE_PRIVATE).edit()
             editor.putString("PATIENT_ID",abhaid);
             editor.apply();
             db.collection("Patients")
                 .document(abhaid)
-                .set(patientData)
+                .set(patient)
                 .addOnSuccessListener {
                     // Add the following line to pass the document ID to the PatientProfileFragment
                     val patientProfileFragment = PatientProfileFragment()

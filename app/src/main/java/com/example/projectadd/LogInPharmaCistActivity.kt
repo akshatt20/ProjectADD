@@ -20,7 +20,8 @@ class LogInPharmaCistActivity : AppCompatActivity() {
         pharmacistLoginId = findViewById(R.id.pharmacistLoginId)
         pharmacistLoginPassword = findViewById(R.id.pharmacistLoginPassword)
         logInPharmacistBtn = findViewById(R.id.logInPharmacistBtn)
-        signUpPharmacistOption = findViewById(R.id.signUpPharmacistOption)
+        signUpPharmacistOption = findViewById(R.id.signUpPharmacistOption) // Initialize signUpPharmacistOption here
+
         logInPharmacistBtn.setOnClickListener {
             val username = pharmacistLoginId.text.toString()
             val password = pharmacistLoginPassword.text.toString()
@@ -29,13 +30,11 @@ class LogInPharmaCistActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(applicationContext, "Login Success", Toast.LENGTH_SHORT).show()
             }
-
         }
-        signUpPharmacistOption = findViewById(R.id.signUpPharmacistOption)
+
         signUpPharmacistOption.setOnClickListener {
             val intent = Intent(this, SignUpPharmacistActivity::class.java)
             startActivity(intent)
         }
     }
 }
-

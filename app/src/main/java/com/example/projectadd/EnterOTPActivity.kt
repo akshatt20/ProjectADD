@@ -2,32 +2,62 @@ package com.example.projectadd
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract.CommonDataKinds.Phone
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
+import com.example.projectadd.databinding.ActivityEnterOtpactivityBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import com.google.firebase.auth.PhoneAuthCredential
+import com.google.firebase.auth.PhoneAuthProvider
 
 class EnterOTPActivity : AppCompatActivity() {
-    private lateinit var verifyOtp:Button
-    private lateinit var otp1:EditText
-    private lateinit var otp2:EditText
-    private lateinit var otp3:EditText
-    private lateinit var otp4:EditText
-    private lateinit var otp5:EditText
-    private lateinit var otp6:EditText
-    private lateinit var resendOtpMob:TextView
+
+    private lateinit var binding: ActivityEnterOtpactivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_enter_otpactivity)
-        verifyOtp=findViewById(R.id.verifyOtp)
-        otp1=findViewById(R.id.otp1)
-        otp2=findViewById(R.id.otp2)
-        otp3=findViewById(R.id.otp3)
-        otp4=findViewById(R.id.otp4)
-        otp5=findViewById(R.id.otp5)
-        otp6=findViewById(R.id.otp6)
-        resendOtpMob=findViewById(R.id.resendOtpMob)
+        binding = ActivityEnterOtpactivityBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
+
+        val otp = intent.getStringExtra("OTP")!!
+
+        binding.verifyOtp.setOnClickListener {
+            var enteredOtp = (binding.otp1.text.toString()+
+                    binding.otp2.text.toString()+binding.otp3.text.toString() +
+                    binding.otp4.text.toString() + binding.otp5.text.toString() +
+                    binding.otp6.text.toString())
+            Log.i("adi", "onCreate: entered " + enteredOtp)
+            Log.i("adi", "onCreate: original " + otp)
+
+            var credential : PhoneAuthCredential =  PhoneAuthProvider.getCredential(otp,enteredOtp)
+            signInWithPhoneAuthCredential(credential)
+        }
+
+    }
+    private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
+        FirebaseAuth.getInstance().signInWithCredential(credential)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Sign in success, update UI with the signed-in user's information
+                    Log.d("adi", "signInWithCredential:success")
+                    Toast.makeText(this@EnterOTPActivity,"OTP Verified successfully", Toast.LENGTH_SHORT).show()
+
+                    val user = task.result?.user
+
+                } else {
+                    // Sign in failed, display a message and update the UI
+                    Log.w("adi", "signInWithCredential:failure", task.exception)
+                    if (task.exception is FirebaseAuthInvalidCredentialsException) {
+                        // The verification code entered was invalid
+                    }
+
+                }
+            }
     }
 }
 
