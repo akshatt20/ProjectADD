@@ -1,5 +1,6 @@
 package com.example.projectadd
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract.CommonDataKinds.Phone
@@ -46,6 +47,7 @@ class EnterOTPActivity : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d("adi", "signInWithCredential:success")
                     Toast.makeText(this@EnterOTPActivity,"OTP Verified successfully", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@EnterOTPActivity,DoctorHomeActivity::class.java)
 
                     val user = task.result?.user
 

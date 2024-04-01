@@ -21,7 +21,7 @@ private lateinit var doctorWelcome:Button
             startActivity(intent)
         }
         patientWelcome.setOnClickListener {
-            val intent= Intent(this,LogInPatientActivity::class.java)
+            val intent= Intent(this,MedicineDataActivity::class.java)
             startActivity(intent)
         }
         pharmacistWelcome.setOnClickListener {

@@ -6,9 +6,20 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MedicineDataActivity">
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:hint="Search Medicine"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/searchview_background"
+        android:layout_marginBottom="16dp"
+        app:queryBackground="@android:color/transparent" />
 
 
-<androidx.recyclerview.widget.RecyclerView
+
+    <androidx.recyclerview.widget.RecyclerView
     android:id="@+id/recyclerView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"/>

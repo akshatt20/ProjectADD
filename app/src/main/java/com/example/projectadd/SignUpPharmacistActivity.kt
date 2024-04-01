@@ -66,6 +66,10 @@ class SignUpPharmacistActivity : AppCompatActivity() {
                 .add(pharmacist)
                 .addOnSuccessListener {
                     Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show()
+                    val intent= Intent(this, PharmacistEnterActivity::class.java)
+                    startActivity(intent)
+
+
                 }
                 .addOnFailureListener { e ->
                     Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
