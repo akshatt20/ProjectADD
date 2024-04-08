@@ -1,7 +1,7 @@
 package com.example.projectadd.models
 
 data class Medicines(
-    val name:String,
-    val price:String,
-    val quantity:String
+    val name: String = "",
+    var quantity: Int = 0,
+    var id: String = "",
 )

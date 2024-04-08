@@ -7,22 +7,18 @@ import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
-import androidx.appcompat.widget.SearchView
-
 import android.widget.Toast
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.android.gms.tasks.Task
+import androidx.appcompat.widget.SearchView
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
+import com.google.firebase.firestore.FirebaseFirestore
 import java.util.concurrent.TimeUnit
 
-
-class EnterActivity : AppCompatActivity() {
-
+class PharmacistEnterActivity : AppCompatActivity() {
     private lateinit var listView: ListView
     private lateinit var adapter: ArrayAdapter<String>
     private lateinit var searchView: SearchView
@@ -30,15 +26,13 @@ class EnterActivity : AppCompatActivity() {
     private lateinit var callbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks
     private lateinit var nextButtonD: Button
     private var selectedId: String? = null // Variable to store the selected item
-    private  lateinit var db:FirebaseFirestore;
-
+    private  lateinit var db: FirebaseFirestore;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_enter)
-
+        setContentView(R.layout.activity_pharmacist_enter)
         // Initialize ListView and adapter
-        listView = findViewById(R.id.userList)
-        searchView = findViewById(R.id.searchView)
+        listView = findViewById(R.id.userList2)
+        searchView = findViewById(R.id.searchView2)
         nextButtonD = findViewById(R.id.nextButtonD)
         adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1)
         listView.adapter = adapter
@@ -149,7 +143,7 @@ class EnterActivity : AppCompatActivity() {
         documentReference.get()
             .addOnSuccessListener { documentSnapshot ->
                 if (documentSnapshot.exists()) {
-                    val phoneNumber = documentSnapshot.getString("mobileNo")
+                    val phoneNumber = documentSnapshot.getString("mobile")
                     if (!phoneNumber.isNullOrEmpty()) {
                         // Format the phone number to E.164 format (add country code if missing)
                         val formattedPhoneNumber = if (phoneNumber.startsWith("+")) {
@@ -210,8 +204,8 @@ class EnterActivity : AppCompatActivity() {
                 // Save the verification ID somewhere, for example, to the shared preferences
                 // or send it to the user's device
                 // ...
-                val intent = Intent(this@EnterActivity,EnterOTPActivity::class.java)
-                intent.putExtra("ABHA_ID",selectedId)
+                val intent = Intent(this@PharmacistEnterActivity,EnterOTPPharmacistActivity::class.java)
+
                 intent.putExtra("OTP", verificationId)
                 startActivity(intent)
 

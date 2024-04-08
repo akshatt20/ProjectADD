@@ -9,32 +9,42 @@ import com.example.projectadd.fragments.PatientSettingsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class PatientDetailsActivity : AppCompatActivity() {
-    private lateinit var patientBottom_Navigation:BottomNavigationView
+    private lateinit var patientBottom_Navigation: BottomNavigationView
+    private lateinit var abhaID: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_patient_details)
-        patientBottom_Navigation=findViewById(R.id.patientBottom_Navigation)
-        val homeFragment=PatientHomeFragment()
-        val profileFragment=PatientProfileFragment()
-        val settingsFragment=PatientSettingsFragment()
 
+        // Retrieve the patient ID from intent extras
+        abhaID = intent.getStringExtra("ABHA_ID") ?: ""
+
+        // Initialize the bottom navigation view
+        patientBottom_Navigation = findViewById(R.id.patientBottom_Navigation)
+
+        // Create instances of the fragments
+        val homeFragment = PatientHomeFragment(abhaID)
+        val profileFragment = PatientProfileFragment(abhaID)
+        val settingsFragment = PatientSettingsFragment()
+
+        // Display the home fragment initially
         makeCurrentFragment(homeFragment)
 
-        patientBottom_Navigation.setOnNavigationItemSelectedListener{
-            when(it.itemId){
-              R.id.patientHomeIcon->makeCurrentFragment(homeFragment)
-                R.id.patientProfileIcon->makeCurrentFragment(profileFragment)
-                R.id.patientSettingsIcon->makeCurrentFragment(settingsFragment)
-
+        // Set listener for bottom navigation items
+        patientBottom_Navigation.setOnNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.patientHomeIcon -> makeCurrentFragment(homeFragment)
+                R.id.patientProfileIcon -> makeCurrentFragment(profileFragment)
+                R.id.patientSettingsIcon -> makeCurrentFragment(settingsFragment)
             }
             true
-
         }
-
     }
-    private fun makeCurrentFragment(fragment:Fragment)=
+
+    private fun makeCurrentFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.patientDet,fragment)
+            replace(R.id.patientDet, fragment)
             commit()
         }
+    }
 }

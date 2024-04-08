@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.PriorPriscriptionFragment">
+    tools:context=".PatientActPrescriptionActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,36 +13,25 @@
         android:orientation="vertical"
         android:padding="25dp"
         >
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <TextView
-            android:id="@+id/welcomePrior"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Welcome"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_gravity="left"
-            android:layout_marginBottom="5dp"/>
-        <TextView
-            android:id="@+id/fetchNamePrior"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textStyle="bold"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="5dp"/>
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/welcomePrior"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_gravity="left"
+                android:layout_marginBottom="5dp"/>
+
+
+
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/black"
-            android:text="Here are your details"
+            android:text="@string/here_are_your_details"
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_marginBottom="30dp"
@@ -62,7 +52,7 @@
                 android:layout_gravity="left"
                 android:layout_marginBottom="5dp"/>
             <TextView
-                android:id="@+id/fetchdoctorDiagnosedP"
+                android:id="@+id/tvDoctorName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
@@ -136,6 +126,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tvDiseaseName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -150,8 +141,13 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginBottom="20dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvMedicines"
+            android:layout_width="match_parent"
+            tools:listitem="@layout/medicines_item"
+            android:layout_height="match_parent"
+            />
+
     </LinearLayout>
-
-
-
 </LinearLayout>

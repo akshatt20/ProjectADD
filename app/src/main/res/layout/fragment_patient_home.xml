@@ -46,6 +46,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/activatedPres"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -63,27 +64,13 @@
            android:background="@color/colorRed">
 
            <TextView
+               android:id="@+id/deactivatedPres"
                android:layout_width="match_parent"
                android:layout_height="match_parent"
                android:gravity="center"
                android:text="Deactivated"
                android:textSize="18sp"/>
        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/deactivated2"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:orientation="vertical"
-            android:layout_marginBottom="30dp"
-            android:background="@color/colorRed">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Deactivated"
-                android:textSize="18sp"/>
-        </LinearLayout>
 
     </LinearLayout>
 </LinearLayout>

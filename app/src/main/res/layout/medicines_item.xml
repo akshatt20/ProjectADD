@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tvMedicineName"
+        android:layout_width="match_parent"
+        android:text="Abhiya"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_weight="1"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tvMedicineQuantity"
+        android:layout_width="match_parent"
+        android:text="100"
+        android:layout_weight="8"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"/>
+
+
+
+</LinearLayout>

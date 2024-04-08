@@ -17,11 +17,11 @@ private lateinit var doctorWelcome:Button
         patientWelcome=findViewById(R.id.patientWelcome)
         pharmacistWelcome=findViewById(R.id.pharmacistWelcome)
         doctorWelcome.setOnClickListener {
-            val intent= Intent(this,EnterActivity::class.java)
+            val intent= Intent(this,LogInDoctorActivity::class.java)
             startActivity(intent)
         }
         patientWelcome.setOnClickListener {
-            val intent= Intent(this,MedicineDataActivity::class.java)
+            val intent= Intent(this,LogInPatientActivity::class.java)
             startActivity(intent)
         }
         pharmacistWelcome.setOnClickListener {

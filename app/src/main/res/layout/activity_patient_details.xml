@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PatientDetailsActivity">
+
     <FrameLayout
         android:id="@+id/patientDet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/patientBottom_Navigation"
-        />
+        android:layout_alignParentTop="true" />
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/patientBottom_Navigation"
         android:layout_width="match_parent"
