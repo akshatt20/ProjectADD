@@ -3,9 +3,10 @@ package com.example.projectadd
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.projectadd.fragments.PatientHomeFragment
+import com.example.projectadd.fragments.AlarmFragment
+import com.example.projectadd.fragments.PatientHistoryFragment
 import com.example.projectadd.fragments.PatientProfileFragment
-import com.example.projectadd.fragments.PatientSettingsFragment
+import com.example.projectadd.fragments.PatientHomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class PatientDetailsActivity : AppCompatActivity() {
@@ -23,9 +24,10 @@ class PatientDetailsActivity : AppCompatActivity() {
         patientBottom_Navigation = findViewById(R.id.patientBottom_Navigation)
 
         // Create instances of the fragments
-        val homeFragment = PatientHomeFragment(abhaID)
+        val historyFragment = PatientHistoryFragment(abhaID)
         val profileFragment = PatientProfileFragment(abhaID)
-        val settingsFragment = PatientSettingsFragment()
+        val homeFragment = PatientHomeFragment(abhaID)
+        val alarmFragment=AlarmFragment()
 
         // Display the home fragment initially
         makeCurrentFragment(homeFragment)
@@ -33,9 +35,10 @@ class PatientDetailsActivity : AppCompatActivity() {
         // Set listener for bottom navigation items
         patientBottom_Navigation.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.patientHomeIcon -> makeCurrentFragment(homeFragment)
+                R.id.patientHistoryIcon -> makeCurrentFragment(historyFragment)
                 R.id.patientProfileIcon -> makeCurrentFragment(profileFragment)
-                R.id.patientSettingsIcon -> makeCurrentFragment(settingsFragment)
+                R.id.patientHomeIcon -> makeCurrentFragment(homeFragment)
+                R.id.patientAlarmIcon->makeCurrentFragment(alarmFragment)
             }
             true
         }

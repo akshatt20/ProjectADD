@@ -27,6 +27,7 @@ class SignUpPatientActivity : AppCompatActivity() {
     private lateinit var patientAbhaId: EditText
     private lateinit var patientSignup: Button
     private lateinit var db: FirebaseFirestore
+    private lateinit var patientEmergencyContact:EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +44,7 @@ class SignUpPatientActivity : AppCompatActivity() {
         patientResidence = findViewById(R.id.patientResidence)
         patientAbhaId = findViewById(R.id.patientAbhaId)
         patientSignup = findViewById(R.id.patientSignup)
+        patientEmergencyContact=findViewById(R.id.patientEmergencyContact)
         val patientSex: Spinner = findViewById(R.id.patientSex)
         val textSize = patientName.textSize
         val genders = resources.getStringArray(R.array.gender_array)
@@ -62,9 +64,10 @@ class SignUpPatientActivity : AppCompatActivity() {
             val password = patientPassword.text.toString()
             val residence = patientResidence.text.toString()
             val abhaid = patientAbhaId.text.toString()
+            val emergency=patientEmergencyContact.text.toString()
 
             // Validate fields
-            if (name.isEmpty() || mobile.isEmpty() || age.isEmpty() || sex.isEmpty() || password.isEmpty() || residence.isEmpty() || abhaid.isEmpty()) {
+            if (emergency.isEmpty()||name.isEmpty() || mobile.isEmpty() || age.isEmpty() || sex.isEmpty() || password.isEmpty() || residence.isEmpty() || abhaid.isEmpty()) {
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
@@ -79,13 +82,14 @@ class SignUpPatientActivity : AppCompatActivity() {
                 "mobile" to mobile,
                 "age" to age,
                 "sex" to sex,
+                "emergency" to emergency,
                 "password" to password,
                 "residence" to residence,
                 "abhaid" to abhaid // Add Abha ID to patient data
             )
             // "ID" is the key, yourID is the value
 
-            val patient = Patient(name, abhaid, mobile, age, residence, sex,password, ArrayList())
+            val patient = Patient(name, abhaid, mobile, age, residence, sex,password,emergency,ArrayList())
 
 //            val editor = getSharedPreferences("APP_PREFS", MODE_PRIVATE).edit()
 //            editor.putString("PATIENT_ID",abhaid);

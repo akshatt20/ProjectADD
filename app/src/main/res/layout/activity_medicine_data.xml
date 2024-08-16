@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/selected"
     tools:context=".MedicineDataActivity">
 
     <androidx.appcompat.widget.SearchView
@@ -47,7 +48,53 @@
 
 
     </LinearLayout>
+    <LinearLayout
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/llTests"
+        android:layout_marginTop="16dp"
+        android:padding="16dp">
 
+        <TextView
+            android:id="@+id/prescribedTests"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
+            android:text="Tests"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <CheckBox
+            android:id="@+id/testOption1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Biopsy" />
+
+        <CheckBox
+            android:id="@+id/testOption2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blood Test" />
+
+        <CheckBox
+            android:id="@+id/testOption3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Endoscopy" />
+
+        <CheckBox
+            android:id="@+id/testOption4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ultrasound" />
+
+    </LinearLayout>
     <LinearLayout
         android:visibility="visible"
         android:layout_width="match_parent"

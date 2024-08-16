@@ -7,12 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projectadd.R
-import com.example.projectadd.models.Medicines
-import com.example.projectadd.models.Prescription
+import com.example.projectadd.models.P
 
 class RCVPrescriptionsAdapter(
     private val context: Context,
-    private var prescriptionsList:ArrayList<Prescription>,
+    private var prescriptionsList:ArrayList<P>,
     private var listener:PrescriptionListener
 ) : RecyclerView.Adapter<RCVPrescriptionsAdapter.ViewHolder>() {
 
@@ -34,7 +33,7 @@ class RCVPrescriptionsAdapter(
     }
 
     interface PrescriptionListener{
-        fun onPrescriptionClicked(prescription: Prescription)
+        fun onPrescriptionClicked(p: P)
     }
 
 
@@ -43,4 +42,4 @@ class RCVPrescriptionsAdapter(
         val tvMedicineName: TextView = itemView.findViewById(R.id.tvPrescriptionName)
 
     }
-}
+}        

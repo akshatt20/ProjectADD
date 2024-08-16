@@ -1,43 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:gravity="center_vertical">
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
 
-    <TextView
-        android:id="@+id/tabb1"
-        android:layout_width="wrap_content"
-        android:text="Abhiya"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="4dp"/>
+        android:padding="16dp">
 
-    <ImageView
-        android:id="@+id/plusButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_add_24"
-        android:contentDescription="@string/plus_button_description"
-        android:padding="16dp"/>
+        <TextView
+            android:id="@+id/tabb1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Abhiya"
+            android:fontFamily="@font/opensans_semibold"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/quantityContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/minusButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_horizontal_rule_24"
-        android:contentDescription="@string/minus_button_description"
-        android:padding="16dp"/>
-    <TextView
-        android:id="@+id/quantityTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:textSize="18sp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
+        <LinearLayout
+            android:id="@+id/quantityContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-</LinearLayout>
+            <ImageView
+                android:id="@+id/minusButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/minus_button_description"
+                android:src="@drawable/baseline_horizontal_rule_24" />
+
+            <TextView
+                android:id="@+id/quantityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="0"
+                android:fontFamily="@font/opensans_semibold"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/plusButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/plus_button_description"
+                android:src="@drawable/baseline_add_24" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/divider_color"
+            app:layout_constraintTop_toBottomOf="@+id/quantityContainer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

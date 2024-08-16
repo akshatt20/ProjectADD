@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
+    android:background="@drawable/selected"
     tools:context=".LogInDoctorActivity"
     >
     <LinearLayout
@@ -15,7 +16,7 @@
         android:layout_marginHorizontal="4dp"
         android:padding="20dp"
         android:orientation="vertical"
-        android:background="@color/white">
+        >
 
         <TextView
             android:layout_width="match_parent"
@@ -34,6 +35,7 @@
                 android:elevation="3dp"
                 android:layout_marginBottom="12dp"
                 android:layout_marginRight="3dp"
+                android:backgroundTint="@color/back1"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:paddingHorizontal="25dp"
@@ -57,6 +59,8 @@
             android:elevation="3dp"
             android:textSize="20sp"
             android:ems="10"
+            android:backgroundTint="@color/back1"
+
             android:hint="@string/password"
             android:padding="15dp"
             android:inputType="textPassword"
@@ -75,6 +79,7 @@
             android:layout_marginTop="25dp"
             android:text="@string/log_in"
             android:textSize="22sp"
+            android:backgroundTint="@color/buttonin"
             android:textColor="@color/white"
             android:padding="10dp" />
         <LinearLayout
@@ -95,7 +100,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="Sign Up"
+                android:text="@string/sign_up"
                 android:textSize="15sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"

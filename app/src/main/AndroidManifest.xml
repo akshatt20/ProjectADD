@@ -3,6 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -14,6 +25,45 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectAdd"
         tools:targetApi="31">
+        <activity
+            android:name=".QRScannerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QRCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QRCodeFullScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ScanningActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LanguageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChooseLabOptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LabReportsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NextActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpLabActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LogInLabActivity"
+            android:exported="false" />
         <activity
             android:name=".ActivityPrescriptionDetails"
             android:exported="false" />
@@ -82,13 +132,11 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <receiver
+            android:name=".AlarmReceiver"
+            android:exported="true" />
     </application>
 
 </manifest>

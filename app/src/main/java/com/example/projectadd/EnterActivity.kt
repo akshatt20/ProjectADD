@@ -27,6 +27,8 @@ class EnterActivity : AppCompatActivity() {
     private lateinit var adapter: ArrayAdapter<String>
     private lateinit var searchView: SearchView
     private lateinit var auth: FirebaseAuth
+    private lateinit var username: String
+
     private lateinit var callbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks
     private lateinit var nextButtonD: Button
     private var selectedId: String? = null // Variable to store the selected item
@@ -42,6 +44,7 @@ class EnterActivity : AppCompatActivity() {
         nextButtonD = findViewById(R.id.nextButtonD)
         adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1)
         listView.adapter = adapter
+        username = intent.getStringExtra("DOCTOR_NAME") ?: ""
 
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
@@ -213,6 +216,8 @@ class EnterActivity : AppCompatActivity() {
                 val intent = Intent(this@EnterActivity,EnterOTPActivity::class.java)
                 intent.putExtra("ABHA_ID",selectedId)
                 intent.putExtra("OTP", verificationId)
+                intent.putExtra("DOCTOR_NAME", username)
+
                 startActivity(intent)
 
             }

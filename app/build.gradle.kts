@@ -44,7 +44,6 @@ dependencies {
     implementation("com.google.firebase:firebase-database:20.3.1")
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.firebase:firebase-storage:20.3.0")
     testImplementation("junit:junit:4.13.2")
@@ -54,8 +53,10 @@ dependencies {
     implementation ("com.google.android.material:material:1.11.0")
     implementation ("com.google.zxing:core:3.4.1")
     implementation ("com.journeyapps:zxing-android-embedded:4.2.0")
-
+    implementation ("com.google.code.gson:gson:2.8.8")
     implementation ("com.google.code.gson:gson:2.10.1")
-
-
+    implementation ("com.google.mlkit:barcode-scanning:17.0.3")
+    implementation ("androidx.camera:camera-camera2:1.1.0")
+    implementation ("androidx.camera:camera-lifecycle:1.1.0")
+    implementation ("androidx.camera:camera-view:1.1.0")
 }

@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/selected"
     tools:context=".DoctorHomeActivity">
 
     <LinearLayout
@@ -13,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="2dp"
-        android:background="@color/white"
+
         android:orientation="vertical"
         android:padding="25dp"
         tools:layout_editor_absoluteX="2dp"
@@ -48,13 +49,28 @@
             android:layout_height="wrap_content"
             android:text="New Prescription+"
             android:textSize="20dp"
+            android:backgroundTint="@color/buttonin"
             android:layout_marginBottom="20sp"
             />
         <Button
             android:id="@+id/previousPatient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+
+            android:backgroundTint="@color/buttonin"
             android:text="Request previous records of patient"
+            android:textSize="20dp"
+
+            />
+
+        <Button
+            android:id="@+id/logoutButtonDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_marginTop="200dp"
+            android:backgroundTint="@color/buttonin"
             android:textSize="20dp"
 
             />

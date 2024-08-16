@@ -74,15 +74,16 @@ class SignUpDoctorActivity : AppCompatActivity() {
 
             // Add a new document with a generated ID
             db.collection("Doctors")
-                .add(doctor)
-                .addOnSuccessListener { documentReference ->
+                .document(name)  // Use the doctor's name as the document ID
+                .set(doctor)
+                .addOnSuccessListener {
                     Toast.makeText(this, "Saved", Toast.LENGTH_LONG).show()
                     // Navigate to DoctorHomeActivity after successful signup
                     val intent = Intent(this, EnterActivity::class.java)
                     startActivity(intent)
                 }
                 .addOnFailureListener { e ->
-                    Toast.makeText(this, "Error", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_LONG).show()
                 }
         }
     }

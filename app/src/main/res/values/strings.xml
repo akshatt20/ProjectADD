@@ -20,7 +20,6 @@
     <string name="already_have_an_account_login_in">Already have an account Login In</string>
     <string name="welcome_aboard">Welcome ABOARD</string>
     <string name="please_enter_details">Please enter details</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="we_send_a_code_to_verify_your_id">We send a code to verify your ID</string>
     <string name="verification">Verification</string>
@@ -30,6 +29,11 @@
     <string name="plus_button_description">Increase Quantity</string>
     <string name="minus_button_description">Decrease Quantity</string>
     <string name="here_are_your_details">Here are your details</string>
+    <string name="laboratory">Laboratory</string>
+    <string name="name">Name</string>
+    <string name="mobile_no">Mobile No</string>
+    <string name="abha_id">Abha Id</string>
+    <string name="residence">Residence</string>
     <string-array name="gender_array">
         <item>Male</item>
         <item>Female</item>

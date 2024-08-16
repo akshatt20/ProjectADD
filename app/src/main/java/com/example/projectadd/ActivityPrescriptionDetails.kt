@@ -4,14 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.projectadd.adapters.RCVMedicinesAdapter
-import com.example.projectadd.databinding.ActivityPatientDeactPrescriptionBinding
 import com.example.projectadd.databinding.ActivityPrescriptionDetailsBinding
-import com.example.projectadd.models.Prescription
+import com.example.projectadd.models.P
 import com.google.gson.Gson
 
 class ActivityPrescriptionDetails : AppCompatActivity() {
 
-    private lateinit var prescription:Prescription
+    private lateinit var p:P
     private lateinit var binding: ActivityPrescriptionDetailsBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,11 +18,11 @@ class ActivityPrescriptionDetails : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        prescription = Gson().fromJson(intent.getStringExtra("PRESCRIPTION")!!,Prescription::class.java)
+        p = Gson().fromJson(intent.getStringExtra("PRESCRIPTION")!!,P::class.java)
 
-        binding.tvPDDiseaseName.text = prescription.disease
+        binding.tvPDDiseaseName.text = p.disease
         binding.rcvPDMedicines.layoutManager =  LinearLayoutManager(this);
-        binding.rcvPDMedicines.adapter =  RCVMedicinesAdapter(this,prescription.medicinesList)
+        binding.rcvPDMedicines.adapter =  RCVMedicinesAdapter(this,p.mL)
 
     }
 }

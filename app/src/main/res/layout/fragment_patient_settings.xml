@@ -3,23 +3,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.PatientSettingsFragment">
+    android:background="@drawable/selected"
+    android:orientation="vertical"
+    tools:context=".fragments.PatientHomeFragment">
 
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:orientation="vertical"
-       android:padding="20dp"
-       >
-       <Button
-           android:id="@+id/logoutButton"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:text="Logout"
-           android:layout_gravity="center"
-           android:gravity="center"
-           android:textAlignment="center"
-           android:layout_marginTop="250dp"
-           />
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/visit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
+            android:backgroundTint="@color/buttonin"
+            android:gravity="center"
+            android:text="Visit Doctor"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:id="@+id/qrCodeImageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/timerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/scanM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/buttonin"
+            android:gravity="center"
+            android:text="Scan Medicine"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/buttonin"
+            android:gravity="center"
+            android:text="Logout"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <!-- Added PreviewView for camera preview -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
 </LinearLayout>

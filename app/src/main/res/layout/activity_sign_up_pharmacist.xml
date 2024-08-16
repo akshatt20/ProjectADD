@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@drawable/selected"
     android:padding="20dp"
+
     tools:context=".SignUpPharmacistActivity">
 
     <LinearLayout
@@ -19,7 +20,6 @@
         android:layout_height="wrap_content"
         android:padding="25dp"
         android:layout_marginHorizontal="3dp"
-        android:background="@color/white"
         android:elevation="6dp"
         android:orientation="vertical">
         <TextView
@@ -41,6 +41,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="3dp"
+            android:backgroundTint="@color/back1"
+
             android:textColorHint="@color/black"
             android:textSize="20dp"
             android:ems="10"
@@ -57,6 +59,8 @@
             android:id="@+id/pharmacistMobileNoemail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/back1"
+
             android:layout_marginBottom="12dp"
             android:layout_marginHorizontal="3dp"
             android:textColorHint="@color/black"
@@ -79,6 +83,8 @@
             android:background="@color/white"
             android:elevation="3dp"
             android:ems="10"
+            android:backgroundTint="@color/back1"
+
             android:textSize="20dp"
             android:hint="Password"
             android:inputType="textPassword"
@@ -101,6 +107,8 @@
             android:padding="15dp"
             android:textColor="@color/white"
             android:textColorHint="@color/black"
+            android:backgroundTint="@color/back1"
+
             />
 
         <EditText
@@ -113,6 +121,8 @@
             android:ems="10"
             android:textSize="20dp"
             android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/back1"
+
             android:background="@color/white"
             android:padding="15dp"
             android:hint="@string/degree"
@@ -133,6 +143,8 @@
             android:hint="License No"
             android:inputType="textPassword"
             android:padding="15dp"
+            android:backgroundTint="@color/back1"
+
             android:textColor="@color/white"
             android:textColorHint="@color/black"
            />
@@ -149,6 +161,7 @@
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="20sp"
+        android:backgroundTint="@color/buttonin"
         android:layout_marginBottom="12dp"
         />
 <LinearLayout

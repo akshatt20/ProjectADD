@@ -3,46 +3,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.PatientHomeFragment">
+    android:background="@drawable/selected"
+    tools:context=".fragments.PatientHistoryFragment">
 
-
-
-        <LinearLayout
-            android:id="@+id/patientProfile"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="2dp"
-            android:background="@color/white"
-            android:orientation="vertical"
-            android:padding="25dp"
-            >
+    <LinearLayout
+        android:id="@+id/patientProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="2dp"
+        android:background="@drawable/selected"
+        android:orientation="vertical"
+        android:padding="25dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/black"
-            android:text="WELCOME ABOARD"
+            android:text="Previous Records"
             android:textColor="@color/black"
             android:textSize="25sp"
             android:layout_marginBottom="10dp"
-            android:scrollbarSize="15dp"
-            />
+            android:scrollbarSize="15dp" />
 
-        <TextView
+        <SearchView
+            android:id="@+id/searchView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Here is every detail of the patient you have entered"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:layout_marginBottom="50dp"
-            />
+            android:queryHint="Search by date/lab test/disease/doctor"
+            android:iconifiedByDefault="false"
+            android:layout_marginBottom="20dp"/>
 
         <LinearLayout
             android:id="@+id/activated"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:background="@color/teal_200"
-            android:layout_marginBottom="30dp"
+            android:background="@drawable/rounded_activated"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="20dp"
             android:orientation="vertical">
 
             <TextView
@@ -55,22 +52,22 @@
                 android:textSize="18sp" />
         </LinearLayout>
 
-       <LinearLayout
-           android:id="@+id/deactivated1"
-           android:layout_width="match_parent"
-           android:layout_height="70dp"
-           android:orientation="vertical"
-           android:layout_marginBottom="30dp"
-           android:background="@color/colorRed">
+        <LinearLayout
+            android:id="@+id/deactivated1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_deactivated">
 
-           <TextView
-               android:id="@+id/deactivatedPres"
-               android:layout_width="match_parent"
-               android:layout_height="match_parent"
-               android:gravity="center"
-               android:text="Deactivated"
-               android:textSize="18sp"/>
-       </LinearLayout>
+            <TextView
+                android:id="@+id/deactivatedPres"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Deactivated"
+                android:textSize="18sp"/>
+        </LinearLayout>
 
     </LinearLayout>
 </LinearLayout>

@@ -8,5 +8,6 @@ data class Patient(
     val address: String = "",
     val gender: String = "",
     val password:String="",
-    var prescriptions: ArrayList<Prescription> = ArrayList()
+    val emergency:String="",
+    var prescriptions: ArrayList<P> = ArrayList()
 )

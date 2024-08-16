@@ -40,6 +40,11 @@ class LogInDoctorActivity : AppCompatActivity() {
                         if (password==storedPassword) {
                             Toast.makeText(applicationContext, "Login Succeus", Toast.LENGTH_SHORT)
                                 .show()
+                            val intent = Intent(this, EnterActivity::class.java)
+                            intent.putExtra("DOCTOR_NAME", username)
+
+
+                            startActivity(intent)
                         }
                             else{
                                 Toast.makeText(applicationContext,"Invalid username or password",Toast.LENGTH_SHORT).show()

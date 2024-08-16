@@ -42,6 +42,7 @@ class LogInPatientActivity : AppCompatActivity() {
                             val intent = Intent(this, PatientDetailsActivity::class.java)
                             // Add any extra data if needed
                             intent.putExtra("ABHA_ID", username)
+
                             startActivity(intent)
                             finish()
 

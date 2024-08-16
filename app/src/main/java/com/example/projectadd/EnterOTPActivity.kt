@@ -19,12 +19,15 @@ class EnterOTPActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityEnterOtpactivityBinding
     private  lateinit var abhaId:String
+    private lateinit var username: String
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityEnterOtpactivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
         abhaId = intent.getStringExtra("ABHA_ID")!!
+        username = intent.getStringExtra("DOCTOR_NAME") ?: ""
 
 
         val otp = intent.getStringExtra("OTP")!!
@@ -63,6 +66,8 @@ class EnterOTPActivity : AppCompatActivity() {
                     Toast.makeText(this@EnterOTPActivity,"OTP Verified successfully", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this@EnterOTPActivity,DoctorHomeActivity::class.java)
                     intent.putExtra("ABHA_ID", abhaId)
+                    intent.putExtra("DOCTOR_NAME", username)
+
                     startActivity(intent)
                     val user = task.result?.user
 
