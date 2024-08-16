@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">प्रोजेक्टएड</string>
+    <string name="doctor">डॉक्टर</string>
+    <string name="patient">रोगी</string>
+    <string name="pharmacist">फार्मासिस्ट</string>
+    <string name="log_in">लॉग इन करें</string>
+    <string name="login_id">लॉगिन आईडी</string>
+    <string name="password">पासवर्ड</string>
+    <string name="enter_your_name">अपना नाम दर्ज करें</string>
+    <string name="mobile_no_email">मोबाइल नंबर/ईमेल</string>
+    <string name="hospital_organization">अस्पताल/संगठन</string>
+    <string name="age">उम्र</string>
+    <string name="gender">लिंग</string>
+    <string name="speciality">विशेषज्ञता</string>
+    <string name="license_no">लाइसेंस नंबर</string>
+    <string name="sign_up">साइन अप करें</string>
+    <string name="already_have_an_account">क्या आपके पास पहले से ही एक खाता है?</string>
+    <string name="location">स्थान</string>
+    <string name="degree">डिग्री</string>
+    <string name="already_have_an_account_login_in">क्या आपके पास पहले से ही एक खाता है? लॉगिन करें</string>
+    <string name="welcome_aboard">स्वागत है</string>
+    <string name="please_enter_details">कृपया विवरण दर्ज करें</string>
+    <string name="hello_blank_fragment">हेलो ब्लैंक फ्रैगमेंट</string>
+    <string name="we_send_a_code_to_verify_your_id">हम आपकी पहचान की पुष्टि करने के लिए एक कोड भेजते हैं</string>
+    <string name="verification">सत्यापन</string>
+    <string name="didnt_recieve_a_code">कोड प्राप्त नहीं हुआ?</string>
+    <string name="resend_code">कोड दोबारा भेजें</string>
+    <string name="verify">सत्यापित करें</string>
+    <string name="plus_button_description">मात्रा बढ़ाएं</string>
+    <string name="minus_button_description">मात्रा घटाएं</string>
+    <string name="here_are_your_details">यहां आपके विवरण हैं</string>
+    <string name="laboratory">लैब</string>
+    <string name="name">नाम</string>
+    <string name="mobile_no">मोबाइल नंबर</string>
+    <string name="abha_id">अभा आईडी</string>
+    <string name="residence">निवास स्थान</string>
+    <string-array name="gender_array">
+        <item>पुरुष</item>
+        <item>महिला</item>
+        <item>अन्य</item>
+    </string-array>
+</resources>

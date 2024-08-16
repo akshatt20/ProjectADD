@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/selected"
+    android:padding="16dp"
+    tools:context=".fragments.AlarmFragment">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Alarm"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:paddingBottom="16dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/medicine_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter Medicine Name"
+            android:inputType="text"
+            android:padding="8dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/alarm_time"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter Time (e.g., 9:00 PM)"
+            android:inputType="text"
+            android:padding="8dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/set_alarm_button"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Set Alarm"
+        android:backgroundTint="@color/buttonin"
+        android:padding="12dp" />
+    <!-- Add this button after the "Set Alarm" button in your AlarmFragment layout -->
+    <Button
+        android:id="@+id/go_to_history_button"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Set Alarms from History"
+        android:backgroundTint="@color/buttonin"
+        android:padding="12dp" />
+    <LinearLayout
+        android:id="@+id/alarm_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </LinearLayout>
+</LinearLayout>
