@@ -1,13 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
     tools:context=".QRScannerActivity"
     android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/buttonin"
+        android:padding="8dp">
 
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="28dp"
+            android:src="@drawable/arrow__1_"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medicine Scanner"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.616"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Centered TextView to display instructions -->
+    <TextView
+        android:id="@+id/scanText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan patient QR code"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp" />
+
+    <!-- Small centered PreviewView for the QR scanner -->
     <androidx.camera.view.PreviewView
         android:id="@+id/previewView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/scanText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/preview_background" />
 
-</FrameLayout>
+    <!-- Voice icon below the scanner -->
+    <ImageView
+        android:id="@+id/voiceIcon"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+
+        android:src="@drawable/baseline_settings_voice_24"
+    android:layout_below="@id/previewView"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="50dp"
+    android:contentDescription="Voice icon" />
+
+</RelativeLayout>

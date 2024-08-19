@@ -1,20 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="290dp"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp"
-    android:gravity="center_vertical">
+    android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/rounded_red_background"> <!-- Set custom drawable as background -->
 
+    <!-- Doctor's Name -->
     <TextView
-        android:id="@+id/tvPrescriptionName"
-        android:layout_width="match_parent"
-        android:text="Abhiya"
+        android:id="@+id/tvDoctorName"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Dr. Name"
+        android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_weight="1"
-        android:textSize="16sp"/>
+        android:textColor="@android:color/black" />
 
+    <!-- Disease -->
+    <TextView
+        android:id="@+id/tvDiseaseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disease Name"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="4dp" />
+
+    <!-- Date and Time -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <!-- Date -->
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Date"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <!-- Time -->
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
 
 
 </LinearLayout>

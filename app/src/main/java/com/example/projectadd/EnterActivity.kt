@@ -44,7 +44,6 @@ class EnterActivity : AppCompatActivity() {
         nextButtonD = findViewById(R.id.nextButtonD)
         adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1)
         listView.adapter = adapter
-        username = intent.getStringExtra("DOCTOR_NAME") ?: ""
 
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
@@ -216,7 +215,6 @@ class EnterActivity : AppCompatActivity() {
                 val intent = Intent(this@EnterActivity,EnterOTPActivity::class.java)
                 intent.putExtra("ABHA_ID",selectedId)
                 intent.putExtra("OTP", verificationId)
-                intent.putExtra("DOCTOR_NAME", username)
 
                 startActivity(intent)
 

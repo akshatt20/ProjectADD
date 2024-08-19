@@ -29,6 +29,7 @@ class SignUpPatientActivity : AppCompatActivity() {
     private lateinit var db: FirebaseFirestore
     private lateinit var patientEmergencyContact:EditText
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up_patient)
@@ -94,6 +95,7 @@ class SignUpPatientActivity : AppCompatActivity() {
 //            val editor = getSharedPreferences("APP_PREFS", MODE_PRIVATE).edit()
 //            editor.putString("PATIENT_ID",abhaid);
 //            editor.apply();
+
             db.collection("Patients")
                 .document(abhaid)
                 .set(patient)

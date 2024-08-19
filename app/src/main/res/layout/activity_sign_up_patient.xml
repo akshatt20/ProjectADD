@@ -5,14 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:background="@drawable/selected"
-    tools:context=".SignUpPatientActivity">
+    android:background="@color/white"
+    tools:context=".SignUpPatientActivity"
+     >
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="20dp">
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,20 +27,14 @@
         android:orientation="vertical"
         >
 
-     <TextView
-         android:id="@+id/patientWelcome"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:text="Welcome ABOARD"
-         android:textStyle="bold"
-         android:layout_gravity="left"
-         />
+
         <TextView
             android:id="@+id/Details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Enter your details"
             android:textStyle="bold"
+            android:textSize="16dp"
             android:layout_marginBottom="10dp"
             android:layout_gravity="left"
 
@@ -47,17 +46,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/back1"
-
             android:layout_marginHorizontal="3dp"
             android:textColorHint="@color/black"
             android:hint="@string/name"
             android:textSize="20sp"
             android:textColor="@color/black"
             android:inputType="text"
-            android:ems="10"
-            android:elevation="3dp"
             android:background="@color/white"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="6dp"
             android:padding="15dp"
             />
         <EditText
@@ -72,10 +68,8 @@
 
             android:textColor="@color/black"
             android:inputType="text"
-            android:ems="10"
-            android:elevation="3dp"
             android:background="@color/white"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="6dp"
             android:padding="15dp"
              />
         <EditText
@@ -87,11 +81,9 @@
             android:textSize="20sp"
             android:textColorHint="@color/black"
             android:hint="Aadhar No."
-            android:ems="10"
             android:textColor="@color/black"
             android:inputType="text"
-            android:elevation="3dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="6dp"
             android:background="@color/white"
             android:padding="15dp"
             />
@@ -105,10 +97,9 @@
             android:textColorHint="@color/black"
             android:textSize="20sp"
             android:hint="Age"
-            android:elevation="3dp"
             android:textColor="@color/black"
             android:inputType="text"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="6dp"
             android:background="@color/white"
             android:padding="15dp"
             />
@@ -119,15 +110,13 @@
             android:layout_marginHorizontal="3dp"
             android:textColorHint="@color/black"
             android:hint="Sex"
-            android:ems="10"
             android:backgroundTint="@color/back1"
 
             android:textStyle="bold"
-            android:elevation="3dp"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:layout_centerInParent="true"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="6dp"
             android:background="@color/white"
             android:padding="15dp"
             />
@@ -141,12 +130,10 @@
 
             android:textColorHint="@color/black"
             android:hint="Password"
-            android:elevation="3dp"
             android:textColor="@color/black"
             android:inputType="textPassword"
             android:textSize="20sp"
-            android:ems="10"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="6dp"
             android:background="@color/white"
             android:padding="15dp"
             />
@@ -162,10 +149,8 @@
             android:textColor="@color/black"
             android:inputType="text"
             android:textSize="20sp"
-            android:elevation="3dp"
             android:background="@color/white"
-            android:ems="10"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="6dp"
             android:padding="15dp"
             />
         <EditText
@@ -179,10 +164,8 @@
             android:textColor="@color/black"
             android:inputType="text"
             android:textSize="20sp"
-            android:elevation="3dp"
             android:background="@color/white"
-            android:ems="10"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="6dp"
             android:padding="15dp"
             />
 
@@ -191,10 +174,11 @@
     <Button
         android:id="@+id/patientSignup"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
         android:text="Sign Up"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="25sp"
         android:backgroundTint="@color/buttonin"
        />

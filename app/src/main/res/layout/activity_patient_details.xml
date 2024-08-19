@@ -21,7 +21,7 @@
         android:layout_alignParentBottom="true"
         android:background="?android:attr/windowBackground"
         app:menu="@menu/nav_menu"
-        app:itemBackground="@color/blue"
+        app:itemBackground="@color/buttonin"
         app:itemTextColor="@color/white"
         app:itemIconTint="@color/black"
         />

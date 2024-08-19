@@ -1,73 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/selected"
+    android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".fragments.PatientHistoryFragment">
 
-    <LinearLayout
-        android:id="@+id/patientProfile"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginHorizontal="2dp"
-        android:background="@drawable/selected"
-        android:orientation="vertical"
-        android:padding="25dp">
+        android:layout_height="80dp"
+        android:background="@color/buttonin"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/arrow__1_"
+            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView4" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/black"
-            android:text="Previous Records"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:layout_marginBottom="10dp"
-            android:scrollbarSize="15dp" />
+            android:text="Prescription Records"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
 
+    </androidx.constraintlayout.widget.ConstraintLayout>    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25dp">
         <SearchView
             android:id="@+id/searchView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:queryHint="Search by date/lab test/disease/doctor"
             android:iconifiedByDefault="false"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_edittext"
+            android:layout_marginBottom="40dp"/>
 
+        <!-- Activated Prescriptions Button -->
         <LinearLayout
-            android:id="@+id/activated"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:background="@drawable/rounded_activated"
-            android:layout_marginTop="100dp"
-            android:layout_marginBottom="20dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/activatedPres"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Activated"
-                android:textColor="@android:color/black"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/deactivated1"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:id="@+id/activatedPrescriptionCard"
+            android:layout_width="280dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/rounded_deactivated">
+            android:padding="16dp"
+            android:background="@drawable/rounded_background_activated"
+            android:layout_marginBottom="20dp">
 
+            <!-- Doctor's Name -->
             <TextView
-                android:id="@+id/deactivatedPres"
+                android:id="@+id/tvDoctorNameActivated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dr. Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <!-- Disease -->
+            <TextView
+                android:id="@+id/tvDiseaseNameActivated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disease Name"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="4dp" />
+
+            <!-- Date and Time -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Deactivated"
-                android:textSize="18sp"/>
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <!-- Date -->
+                <TextView
+                    android:id="@+id/tvDateActivated"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Date"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <!-- Time -->
+                <TextView
+                    android:id="@+id/tvTimeActivated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Title for Deactivated Prescriptions -->
+
 
     </LinearLayout>
+
+    <!-- RecyclerView for displaying deactivated prescriptions -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvDeactivatedPrescription"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"/>
+</LinearLayout>
 </LinearLayout>

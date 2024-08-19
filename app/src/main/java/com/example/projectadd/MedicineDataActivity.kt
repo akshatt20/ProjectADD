@@ -20,6 +20,8 @@ import com.example.projectadd.models.Md
 import com.example.projectadd.models.mL
 import com.example.projectadd.models.Patient
 import com.example.projectadd.models.P
+import android.content.Context
+
 
 
 class MedicineDataActivity : AppCompatActivity() {
@@ -43,8 +45,8 @@ class MedicineDataActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         abhaId = intent.getStringExtra("ABHA_ID")!!
-        username = intent.getStringExtra("DOCTOR_NAME") ?: ""
-
+        val sharedPreferences = getSharedPreferences("DoctorPrefs", Context.MODE_PRIVATE)
+        username = sharedPreferences.getString("DOCTOR_NAME", "") ?: ""
 
         // Initialize Firestore
         firestore = FirebaseFirestore.getInstance()
@@ -205,7 +207,7 @@ class MedicineDataActivity : AppCompatActivity() {
     private fun uploadDataToFirestore(arrContact: ArrayList<Md>) {
         medicinesList = ArrayList()
         for(i in 0 until arrContact.size) {
-            medicinesList.add(Md(arrContact[i].id,arrContact[i].q, arrContact[i].p))
+            medicinesList.add(Md(arrContact[i].id,arrContact[i].q, arrContact[i].p,arrContact[i].name))
         }
         val mL = mL(arrContact)
         val collectionRef = firestore.collection("medalist")

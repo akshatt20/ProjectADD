@@ -56,6 +56,8 @@ class PatientActPrescriptionActivity : AppCompatActivity() {
                             currentPatient = document.toObject(Patient::class.java)
                             if (currentPatient != null) {
                                 Log.i(TAG, "patient exists")
+                                binding.fetchNamePres.text = currentPatient!!.name
+                                binding.fetchIdPat.text=currentPatient!!.abhaId
 
                                 if (currentPatient!!.prescriptions.isNotEmpty()) {
                                     p = currentPatient!!.prescriptions[currentPatient!!.prescriptions.size - 1]

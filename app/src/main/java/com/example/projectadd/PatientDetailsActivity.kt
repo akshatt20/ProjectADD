@@ -7,6 +7,7 @@ import com.example.projectadd.fragments.AlarmFragment
 import com.example.projectadd.fragments.PatientHistoryFragment
 import com.example.projectadd.fragments.PatientProfileFragment
 import com.example.projectadd.fragments.PatientHomeFragment
+import com.example.projectadd.fragments.ReferralFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class PatientDetailsActivity : AppCompatActivity() {
@@ -27,7 +28,8 @@ class PatientDetailsActivity : AppCompatActivity() {
         val historyFragment = PatientHistoryFragment(abhaID)
         val profileFragment = PatientProfileFragment(abhaID)
         val homeFragment = PatientHomeFragment(abhaID)
-        val alarmFragment=AlarmFragment()
+        val alarmFragment=AlarmFragment(abhaID)
+        val referralFragment= ReferralFragment()
 
         // Display the home fragment initially
         makeCurrentFragment(homeFragment)
@@ -39,6 +41,7 @@ class PatientDetailsActivity : AppCompatActivity() {
                 R.id.patientProfileIcon -> makeCurrentFragment(profileFragment)
                 R.id.patientHomeIcon -> makeCurrentFragment(homeFragment)
                 R.id.patientAlarmIcon->makeCurrentFragment(alarmFragment)
+                R.id.patientReferral->makeCurrentFragment(referralFragment)
             }
             true
         }

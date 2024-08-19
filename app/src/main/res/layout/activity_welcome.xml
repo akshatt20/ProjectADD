@@ -5,30 +5,59 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:background="@drawable/selected"
+    android:background="@color/white"
     tools:context=".WelcomeActivity"
     >
 
-
-    <LinearLayout
-
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
+        android:background="@color/buttonin"
+        android:padding="8dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.076"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.804" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/patientWelcome"
+        android:layout_width="300dp"
+        android:layout_gravity="center"            android:layout_height="wrap_content"
         android:layout_marginHorizontal="3dp"
-        android:layout_marginTop="135dp"
-        android:background="@color/white"
-        android:elevation="6dp"
-        android:orientation="vertical"
-        android:padding="25dp">
+        android:layout_marginBottom="24dp"
+        android:elevation="3dp"
+        android:fontFamily="@font/opensans_semixondensed_bold"
+        android:ems="10"
+        android:textSize="20dp"
+        android:padding="15dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/buttonin"
+        android:text="@string/patient"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
 
 
-        <Button
+    <Button
             android:id="@+id/doctorWelcome"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
+        android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="3dp"
-            android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
             android:elevation="3dp"
             android:ems="10"
@@ -38,33 +67,17 @@
             android:textAlignment="center"
             android:textSize="20dp"
             android:fontFamily="@font/opensans_semixondensed_bold"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textStyle="bold"
             />
 
-        <Button
-            android:id="@+id/patientWelcome"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="3dp"
-            android:layout_marginBottom="24dp"
-            android:elevation="3dp"
-            android:fontFamily="@font/opensans_semixondensed_bold"
-            android:ems="10"
-            android:textSize="20dp"
-            android:padding="15dp"
-            android:backgroundTint="@color/buttonin"
-            android:text="@string/patient"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            />
 
 
 
         <Button
             android:id="@+id/pharmacistWelcome"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="3dp"
             android:layout_marginBottom="24dp"
@@ -76,13 +89,14 @@
             android:textSize="20dp"
             android:fontFamily="@font/opensans_semixondensed_bold"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textStyle="bold"
 
              />
         <Button
             android:id="@+id/labWelcome"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="3dp"
             android:layout_marginBottom="24dp"
@@ -94,7 +108,7 @@
             android:textAlignment="center"
             android:textSize="20dp"
             android:fontFamily="@font/opensans_semixondensed_bold"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textStyle="bold"
             />
 
@@ -105,4 +119,3 @@
     </LinearLayout>
 
 
-</LinearLayout>

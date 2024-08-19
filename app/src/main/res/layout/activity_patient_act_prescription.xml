@@ -4,36 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/selected"
+    android:background="@color/white"
     tools:context=".PatientActPrescriptionActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="2dp"
-        android:background="@drawable/selected"
         android:orientation="vertical"
-        android:padding="25dp">
+       >
 
-        <TextView
-            android:id="@+id/welcomePrior"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Welcome"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_gravity="left"
-            android:layout_marginBottom="5dp"/>
-
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/black"
-            android:text="@string/here_are_your_details"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginBottom="30dp"/>
+            android:layout_height="80dp"
+            android:background="@color/buttonin"
+            android:padding="8dp">
 
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="28dp"
+                android:src="@drawable/arrow__1_"
+                app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Diagnose"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.467"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.75" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:orientation="horizontal">
+     <ImageView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="8dp"
+         android:layout_marginRight="16dp"
+         android:src="@drawable/frame"/>
+    <TextView
+        android:id="@+id/fetchNamePres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text=""
+        />
+
+
+</LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -44,7 +75,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Doctor Under Diagnose :"
+                android:textColor="@color/black"
+
                 android:textSize="16sp"
+                android:paddingLeft="12dp"
+
                 android:textStyle="bold"
                 android:layout_gravity="left"
                 android:layout_marginBottom="5dp"/>
@@ -55,12 +90,33 @@
                 android:layout_height="wrap_content"
                 android:text=""
                 android:textSize="16sp"
+                android:textColor="@color/black"
+
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="5dp"/>
 
         </LinearLayout>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:paddingLeft="12dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="Patient ID: "/>
+        <TextView
+            android:id="@+id/fetchIdPat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text=""
+            />
+    </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -69,9 +125,12 @@
             <TextView
                 android:id="@+id/fetchdateP"
                 android:textStyle="bold"
+                android:textColor="@color/black"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
+                android:paddingLeft="2dp"
                 android:textSize="16sp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="25dp"/>
@@ -81,40 +140,78 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Prescribed Diagnoses"
-            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:paddingLeft="12dp"
             android:textStyle="bold"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="12dp"/>
 
-        <LinearLayout
-            android:id="@+id/diagnosesPrescribedP"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/colorRed"
-            android:layout_marginBottom="30dp"
-            android:orientation="vertical">
+
 
             <TextView
                 android:id="@+id/tvDiseaseName"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="32dp"
                 android:text="Stomach Pain"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
-        </LinearLayout>
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="32dp"
+            android:textStyle="bold"
+            android:text="Days          10"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"
+            />
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="16dp"
+    android:orientation="horizontal">
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Prescription"
-                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:paddingHorizontal="12dp"
+                android:textSize="24sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="10dp"/>
+              />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_marginLeft="100dp"
+        android:text="4X86AC3"
+        android:textColor="@color/black"/>
+
+        </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -129,15 +226,18 @@
                     android:layout_weight="1"
                     android:text="Medicine Name"
                     android:textStyle="bold"
-                    android:textColor="@android:color/white"/>
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                 />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Quantity"
+                    android:text="Days/Week"
                     android:textStyle="bold"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
                     android:gravity="center"/>
 
             </LinearLayout>
@@ -154,6 +254,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Prescribed Tests"
+            android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginBottom="20dp"/>

@@ -3,42 +3,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/selected"
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".fragments.PatientProfileFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/buttonin"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/arrow__1_"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:id="@+id/patientProfile"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="2dp"
-        android:background="@drawable/selected"
         android:orientation="vertical"
         android:padding="25dp"
         >
 
-        <TextView
-            android:id="@+id/patientProfileDetails"
+
+
+
+        <LinearLayout
+            android:id="@+id/iconss"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/black"
-            android:text="WELCOME ABOARD"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:layout_marginBottom="10dp"
-            android:scrollbarSize="15dp"
+            android:orientation="horizontal">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/frame"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="200dp"
             />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/black"
-            android:text="Here is every details of the patient you have entered"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:layout_marginBottom="30dp"
-
-            />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/edit"
+                android:layout_marginBottom="12dp"
+                />
+        </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -49,6 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Name :"
+            android:textColor="@color/black"
             android:textStyle="bold"
             android:layout_gravity="left"
             android:layout_marginBottom="5dp"/>
@@ -57,6 +89,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
+                android:textColor="@color/black"
+
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="5dp"/>
@@ -70,6 +104,8 @@
         <TextView
             android:id="@+id/ageP"
             android:textStyle="bold"
+            android:textColor="@color/black"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Age :"
@@ -81,6 +117,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
+                android:textColor="@color/black"
+
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="5dp"/>
         </LinearLayout>
@@ -95,6 +133,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sex :"
+            android:textColor="@color/black"
+
             android:layout_gravity="left"
             android:layout_marginBottom="5dp"
             />
@@ -104,6 +144,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
+                android:textColor="@color/black"
+
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="5dp"
                 />
@@ -116,6 +158,8 @@
         <TextView
             android:id="@+id/abhaidP"
             android:textStyle="bold"
+            android:textColor="@color/black"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Aadhar No. :"
@@ -126,6 +170,8 @@
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
+
                 android:text=""
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="10dp"
@@ -141,6 +187,8 @@
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
+
                 android:text="Emergency No. :"
                 android:layout_marginBottom="5dp"
                 android:layout_gravity="left" />
@@ -150,6 +198,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
+                android:textColor="@color/black"
+
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="left" />
@@ -163,6 +213,8 @@
             android:id="@+id/mobileP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
+
             android:text="Mobile :"
             android:textStyle="bold"
             android:layout_marginBottom="5dp"
@@ -173,6 +225,8 @@
                 android:layout_height="wrap_content"
                 android:text=""
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+
                 android:textStyle="bold"
                 android:layout_marginBottom="5dp"
                 android:layout_gravity="left" />
@@ -187,6 +241,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Address :"
+            android:textColor="@color/black"
+
             android:textStyle="bold"
             android:layout_marginBottom="5dp"
             android:layout_gravity="left" />
@@ -197,6 +253,8 @@
                 android:layout_marginLeft="10dp"
                 android:text=""
                 android:textStyle="bold"
+                android:textColor="@color/black"
+
                 android:layout_marginBottom="5dp"
                 android:layout_gravity="left" />
         </LinearLayout>

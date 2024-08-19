@@ -1,6 +1,7 @@
 package com.example.projectadd
 
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -79,6 +80,11 @@ class SignUpDoctorActivity : AppCompatActivity() {
                 .addOnSuccessListener {
                     Toast.makeText(this, "Saved", Toast.LENGTH_LONG).show()
                     // Navigate to DoctorHomeActivity after successful signup
+                    val sharedPreferences = getSharedPreferences("DoctorPrefs", Context.MODE_PRIVATE)
+                    val editor = sharedPreferences.edit()
+                    editor.putString("DOCTOR_NAME", name)
+                    editor.apply() // Use apply to save asynchronously
+
                     val intent = Intent(this, EnterActivity::class.java)
                     startActivity(intent)
                 }

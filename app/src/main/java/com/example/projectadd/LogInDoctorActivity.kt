@@ -1,6 +1,6 @@
 package com.example.projectadd
 
-
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -35,33 +35,33 @@ class LogInDoctorActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext, "Please fill all details", Toast.LENGTH_SHORT).show()
             } else {
                 firestore.collection("Doctors").document(username).get().addOnSuccessListener { document ->
-                    if(document!=null){
-                        val storedPassword=document.getString("password")
-                        if (password==storedPassword) {
-                            Toast.makeText(applicationContext, "Login Succeus", Toast.LENGTH_SHORT)
-                                .show()
+                    if (document != null) {
+                        val storedPassword = document.getString("password")
+                        if (password == storedPassword) {
+                            // Store the username in SharedPreferences
+                            val sharedPreferences = getSharedPreferences("DoctorPrefs", Context.MODE_PRIVATE)
+                            val editor = sharedPreferences.edit()
+                            editor.putString("DOCTOR_NAME", username)
+                            editor.apply() // Use apply to save asynchronously
+
+                            Toast.makeText(applicationContext, "Login Success", Toast.LENGTH_SHORT).show()
+
+                            // Proceed to EnterActivity
                             val intent = Intent(this, EnterActivity::class.java)
-                            intent.putExtra("DOCTOR_NAME", username)
-
-
                             startActivity(intent)
+                        } else {
+                            Toast.makeText(applicationContext, "Invalid username or password", Toast.LENGTH_SHORT).show()
                         }
-                            else{
-                                Toast.makeText(applicationContext,"Invalid username or password",Toast.LENGTH_SHORT).show()
-                            }
-                        }
-                        else{
-                            Toast.makeText(applicationContext,"Invalid username or password",Toast.LENGTH_SHORT).show()
-
-                        }
+                    } else {
+                        Toast.makeText(applicationContext, "Invalid username or password", Toast.LENGTH_SHORT).show()
+                    }
+                }
             }
         }
 
-
-    }
         signUpDoctorOption.setOnClickListener {
             val intent = Intent(this, SignUpDoctorActivity::class.java)
             startActivity(intent)
         }
-}}
-
+    }
+}

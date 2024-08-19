@@ -21,14 +21,12 @@ class DoctorHomeActivity : AppCompatActivity() {
         binding = ActivityDoctorHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         abhaId = intent.getStringExtra("ABHA_ID")!!
-        username = intent.getStringExtra("DOCTOR_NAME") ?: ""
 
 
 
         binding.newPatient.setOnClickListener {
             val i = Intent(this@DoctorHomeActivity, MedicineDataActivity::class.java)
             i.putExtra("ABHA_ID", abhaId)
-            i.putExtra("DOCTOR_NAME", username)
 
             startActivity(i)
 
@@ -37,6 +35,10 @@ class DoctorHomeActivity : AppCompatActivity() {
         newPatientButton = findViewById(R.id.newPatient)
         logoutButtonDoctor = findViewById(R.id.logoutButtonDoctor)
         logoutButtonDoctor.setOnClickListener {
+            val sharedPreferences = getSharedPreferences("DoctorPrefs", Context.MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            editor.clear()  // Clear all the data in the preferences
+            editor.apply()
             val intent = Intent(this@DoctorHomeActivity, WelcomeActivity::class.java)
             startActivity(intent)
 

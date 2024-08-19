@@ -1,48 +1,44 @@
 package com.example.projectadd.fragments
 
-import android.Manifest
+import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.Toast
-import androidx.camera.core.CameraSelector
-import androidx.camera.core.ImageAnalysis
-import androidx.camera.core.ImageProxy
-import androidx.camera.core.Preview
-import androidx.camera.lifecycle.ProcessCameraProvider
-import androidx.camera.view.PreviewView
-import androidx.core.content.ContextCompat
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.projectadd.R
 import com.example.projectadd.WelcomeActivity
 import com.example.projectadd.QRCodeActivity
 import com.example.projectadd.QRScannerActivity
-import com.google.mlkit.vision.barcode.BarcodeScanning
-import com.google.mlkit.vision.common.InputImage
-import java.util.concurrent.ExecutorService
-import java.util.concurrent.Executors
-
 
 class PatientHomeFragment(private val abhaID: String) : Fragment() {
 
-    private lateinit var logoutButton: Button
+    private lateinit var logoutButton: ImageView
     private lateinit var visit: Button
     private lateinit var scanM: Button
+    private lateinit var textView3: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_patient_settings, container, false)
+
+        // Initialize views
         logoutButton = view.findViewById(R.id.logoutButton)
         visit = view.findViewById(R.id.visit)
         scanM = view.findViewById(R.id.scanM)
+        textView3 = view.findViewById(R.id.textView3)
+
+        // Retrieve the patient's name from SharedPreferences
+
+
+        // Set the patient's name to textView3
 
         visit.setOnClickListener {
             startQRCodeActivity()

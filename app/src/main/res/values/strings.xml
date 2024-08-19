@@ -34,6 +34,7 @@
     <string name="mobile_no">Mobile No</string>
     <string name="abha_id">Abha Id</string>
     <string name="residence">Residence</string>
+    <string name="records">Records</string>
     <string-array name="gender_array">
         <item>Male</item>
         <item>Female</item>
