@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".SetAlarmActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25dp">
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_edittext"
+            android:queryHint="Search by date/lab test/disease/doctor"
+            android:iconifiedByDefault="false"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="12dp"/>
+<Button
+    android:id="@+id/back"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:text="Back"
+    android:backgroundTint="@color/buttonin"
+    android:layout_gravity="center"
+    android:layout_marginBottom="8dp"/>
+        <!-- Activated Prescriptions Button -->
+        <LinearLayout
+            android:id="@+id/activatedPrescriptionCard"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/rounded_background_activated"
+            android:layout_marginBottom="20dp">
+
+            <!-- Doctor's Name -->
+            <TextView
+                android:id="@+id/tvDoctorNameActivated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dr. Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <!-- Disease -->
+            <TextView
+                android:id="@+id/tvDiseaseNameActivated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disease Name"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="4dp" />
+
+            <!-- Date and Time -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <!-- Date -->
+                <TextView
+                    android:id="@+id/tvDateActivated"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Date"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <!-- Time -->
+                <TextView
+                    android:id="@+id/tvTimeActivated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Title for Deactivated Prescriptions -->
+
+
+        </LinearLayout>
+
+        <!-- RecyclerView for displaying deactivated prescriptions -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvDeactivatedPrescription"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="16dp"/>
+    </LinearLayout>
+</LinearLayout>

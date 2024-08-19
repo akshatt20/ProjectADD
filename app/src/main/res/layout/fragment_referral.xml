@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".fragments.ReferralFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/buttonin"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/arrow__1_"
+            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Referrals"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="6dp"
+        android:weightSum="2">
+
+        <!-- Referred by Section -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvReferredBy1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Referred by"
+                android:textColor="@color/black"
+
+                android:textSize="16sp"
+              />
+            <TextView
+                android:id="@+id/tvReferredBy11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dr. Sivansh Raina"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvReferredTo222"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Referred to"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tvReferredTo22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dr. Ajitesh Mhajan"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Date and Specialty Section -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="4dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvReferralDate1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18 Aug 2024"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_gravity="end" />
+
+            <TextView
+                android:id="@+id/tvSpecialty1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Orthologist | Apollo Delhi"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tvSpecialtyTo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Radiologist | AIIMS Delhi"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_gravity="end"
+                android:layout_marginTop="4dp" />
+            <TextView
+                android:id="@+id/tvSpecialtyTo11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Radiologist | AIIMS Delhi"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_gravity="end"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/black"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Second Referral Block -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="6dp"
+        android:weightSum="2">
+
+        <!-- Referred by Section -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvReferredBy3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Referred by"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+              />
+            <TextView
+                android:id="@+id/tvReferredBy33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dr. Aditya Bhardwaj"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvReferredTo4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Referred to"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tvReferredTo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dr. Arvind Jha"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Date and Specialty Section -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="4dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvReferralDate2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="16 Aug 2024"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_gravity="end" />
+
+            <TextView
+                android:id="@+id/tvSpecialty2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Radiologist | Apurv Una"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text=""/>
+
+            <TextView
+                android:id="@+id/tvSpecialtyTo22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gynecologist | PGMS Una"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_gravity="end"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
