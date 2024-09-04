@@ -29,7 +29,7 @@ class PatientDetailsActivity : AppCompatActivity() {
         val profileFragment = PatientProfileFragment(abhaID)
         val homeFragment = PatientHomeFragment(abhaID)
         val alarmFragment=AlarmFragment(abhaID)
-        val referralFragment= ReferralFragment()
+
 
         // Display the home fragment initially
         makeCurrentFragment(homeFragment)
@@ -41,7 +41,6 @@ class PatientDetailsActivity : AppCompatActivity() {
                 R.id.patientProfileIcon -> makeCurrentFragment(profileFragment)
                 R.id.patientHomeIcon -> makeCurrentFragment(homeFragment)
                 R.id.patientAlarmIcon->makeCurrentFragment(alarmFragment)
-                R.id.patientReferral->makeCurrentFragment(referralFragment)
             }
             true
         }

@@ -15,11 +15,6 @@
         android:icon="@drawable/baseline_alarm_24"
         android:title="Alarm"
         />
-    <item
-        android:id="@+id/patientReferral"
-        android:icon="@drawable/baseline_send_24"
-        android:title="Referrals"
-        />
 
     <item
         android:id="@+id/patientProfileIcon"
